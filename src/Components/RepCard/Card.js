@@ -1,0 +1,75 @@
+import React from "react";
+import styled from "styled-components";
+import ProofpointLogo from "../../assets/Proofpoint.svg";
+import Headshot from "../../assets/Headshot1.jpg";
+
+const Card = () => {
+  return (
+    <StyledCard>
+      <StyledRep>
+        <img src={Headshot} />
+      </StyledRep>
+      <img src={ProofpointLogo} className="logoImg" />
+      <StyledCardInfo>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book.
+      </StyledCardInfo>
+      <StyledButton>Learn More</StyledButton>
+    </StyledCard>
+  );
+};
+
+export default Card;
+
+const StyledCard = styled.div`
+  min-width: 320px;
+  border: 2px solid rgb(41, 50, 61);
+  display: flex;
+  flex-flow: column;
+  border-radius: 0.5rem;
+  padding: 1rem 0;
+
+  .logoImg {
+    max-width: 50%;
+    margin: 2rem auto;
+  }
+`;
+
+const StyledRep = styled.div`
+  place-self: center;
+  border-radius: 50%;
+  height: 125px;
+  width: 125px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+`;
+
+const StyledButton = styled.button`
+  width: 200px;
+  place-self: center;
+  outline: none;
+  background: white;
+  border: 2px solid rgb(41, 50, 61);
+  padding: 5px 10px;
+  border-radius: 2px;
+  font-family: Ubuntu;
+  font-weight: 600;
+  transition: all 300ms ease-in-out;
+
+  &:hover {
+    background: rgb(41, 50, 61);
+    color: rgb(58, 183, 255);
+  }
+`;
+
+const StyledCardInfo = styled.p`
+  padding: 1rem;
+  font-size: 1rem;
+`;
