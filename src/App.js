@@ -1,26 +1,23 @@
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 
 //Components
 import Nav from "./Components/Nav/Nav";
-import Header from "./Components/Header/Header";
-import CardSection from "./Components/RepCard/CardSection";
-import Card from "./Components/RepCard/Card";
+import RepsPage from "./pages/Reps";
+import HomePage from "./pages/Home";
+import AboutPage from "./pages/About";
+import SupportPage from "./pages/Support";
 
 const App = () => (
   <>
     <Nav />
-    <Header />
-    <CardSection>
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-    </CardSection>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/about" element={<AboutPage />} />
+      <Route path="/companies" element={<RepsPage />} />
+      <Route path="/support" element={<SupportPage />} />
+    </Routes>
   </>
 );
 

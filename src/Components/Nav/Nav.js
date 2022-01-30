@@ -1,27 +1,29 @@
 import React from "react";
 import styled from "styled-components";
-import NavLinks from "./NavLinks";
 
-const Nav = () => (
-  <StyledNav>
-    <Title>Repbase</Title>
-    <NavLinks />
-  </StyledNav>
-);
+import { useWindowDimensions } from "../../utils/getWindowDimensions";
+import Desktop from "./Desktop";
+import Mobile from "./Mobile";
+
+const Nav = () => {
+  const { height, width } = useWindowDimensions();
+  return width < 968 ? (
+    <Mobile title={<StyledTitle>Repbase</StyledTitle>} />
+  ) : (
+    <Desktop title={<StyledTitle>Repbase</StyledTitle>} />
+  );
+};
 
 export default Nav;
 
-const StyledNav = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 80%;
-  margin: 1.5rem auto;
+const StyledNav = styled.nav`
+  padding: 1.5rem;
+  width: 100%;
 `;
 
-const Title = styled.h1`
-  color: rgba(41, 50, 61, 1);
-  flex-grow: 1;
-  flex-basis: 33%;
-  // flex-shrink 1;
+const StyledTitle = styled.h1`
+  font-size: 2rem;
+  font-weight: 600;
+  color: #29323d;
+  cursor: pointer;
 `;

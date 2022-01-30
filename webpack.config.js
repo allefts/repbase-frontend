@@ -14,8 +14,18 @@ module.exports = {
     }),
   ],
   resolve: {
-    modules: [__dirname, "src", "node_modules", "utils", "components/*"],
+    modules: [
+      __dirname,
+      "src",
+      "node_modules",
+      "utils",
+      "components/*",
+      "components/Nav/",
+    ],
     extensions: ["*", ".js", ".jsx", ".tsx", ".ts"],
+  },
+  devServer: {
+    historyApiFallback: true,
   },
   module: {
     rules: [
