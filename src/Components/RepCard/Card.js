@@ -24,16 +24,17 @@ const Card = () => {
 export default Card;
 
 const StyledCard = styled.div`
-  min-width: 320px;
+  min-width: 300px;
   border: 2px solid rgb(41, 50, 61);
   display: flex;
   flex-flow: column;
   border-radius: 0.5rem;
   padding: 1rem 0;
+  font-family: Raleway;
 
   .logoImg {
     max-width: 50%;
-    margin: 2rem auto;
+    margin: 1rem auto;
   }
 `;
 
@@ -59,8 +60,6 @@ const StyledButton = styled.button`
   border: 2px solid rgb(41, 50, 61);
   padding: 5px 10px;
   border-radius: 2px;
-  font-family: Ubuntu;
-  font-weight: 600;
   transition: all 300ms ease-in-out;
 
   &:hover {

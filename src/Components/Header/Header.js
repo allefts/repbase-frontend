@@ -14,8 +14,8 @@ const Header = () => {
 export default Header;
 
 const StyledHeader = styled.div`
-  padding: 7rem 0;
-  display: flex;29323d
+  padding: 5rem 1rem;
+  display: flex;
   justify-content: center;
   align-items: center;
 `;

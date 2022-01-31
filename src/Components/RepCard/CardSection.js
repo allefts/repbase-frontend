@@ -6,7 +6,7 @@ const StyledSection = styled.div`
   margin: 0 auto;
   display: grid;
   grid-gap: 10rem;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   place-items: center;
   margin-top: 3rem;
 
@@ -14,6 +14,10 @@ const StyledSection = styled.div`
   //   flex-flow: row wrap;
   //   justify-content: center;
   //   align-items: center;
+
+  @media (max-width: 360px) {
+    width: 95%;
+  }
 `;
 
 const CardSection = ({ children }) => {

@@ -31,10 +31,20 @@ const StyledSearch = styled.div`
     &:hover {
       border: 2px solid rgb(41, 50, 61);
     }
+
+    @media (max-width: 380px) {
+      border-radius: 2rem;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 380px) {
+    flex-flow: column;
   }
 `;
 
 const SearchInput = styled.input`
+  width: 100%;
   flex-grow: 1;
   margin-right: 1rem;
   padding: 0.75rem;
@@ -49,5 +59,9 @@ const SearchInput = styled.input`
   &:focus,
   &:hover {
     border: 2px solid rgba(41, 50, 61, 1);
+  }
+
+  @media (max-width: 380px) {
+    margin: 0 0 1rem 0;
   }
 `;

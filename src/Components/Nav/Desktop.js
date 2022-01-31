@@ -2,21 +2,10 @@ import React, { useRef } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-const Marker = styled.div`
-  position: absolute;
-  left: 0;
-  bottom: 20px;
-
-  height: 4px;
-  width: 0;
-
-  background: #29323d;
-  transition: 0.5s;
-  border-radius: 4px;
-`;
-
-const Desktop = ({ title }) => {
+const Desktop = ({ title, width }) => {
   const markerRef = useRef(null);
+
+  const moveMarkeronResize = () => {};
 
   const moveMarker = ({ target }) => {
     console.log(target.offsetLeft);
@@ -60,12 +49,26 @@ const Desktop = ({ title }) => {
 
 export default Desktop;
 
+const Marker = styled.div`
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+
+  height: 4px;
+  width: 0;
+
+  background: #29323d;
+  transition: 0.5s;
+  border-radius: 4px;
+`;
+
 const NavLinks = styled.div`
   margin: 0 6rem 0 0;
+  // centers nav links
 
   .navLink {
     margin: 0 1.5rem;
-    padding: 3px;
+    padding: 3px 3px 10px 3px;
     color: inherit;
     text-decoration: none;
   }

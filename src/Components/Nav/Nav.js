@@ -10,7 +10,7 @@ const Nav = () => {
   return width < 968 ? (
     <Mobile title={<StyledTitle>Repbase</StyledTitle>} />
   ) : (
-    <Desktop title={<StyledTitle>Repbase</StyledTitle>} />
+    <Desktop title={<StyledTitle>Repbase</StyledTitle>} width={width} />
   );
 };
 
