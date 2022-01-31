@@ -48,18 +48,19 @@ const Mobile = ({ title }) => {
 export default Mobile;
 
 const OpenNav = styled.div`
-  display: ${({ openBurger }) => (openBurger ? "flex" : "none")};
-  transform: ${({ openBurger }) =>
-    openBurger ? "translateX(0)" : "translateX(120%)"};
-
-  transition: all 300ms ease-in-out;
-  flex-flow: column;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  position: absolute;
+  background: white;
+  display: flex;
+
+  transform: ${({ openBurger }) =>
+    openBurger ? "translateX(0vw)" : "translateX(100vw)"};
+
+  flex-flow: column;
+  position: fixed;
   top: 100px;
   right: 0;
-  background: white;
+  transition: all 300ms ease-in-out;
 
   span {
     width: 100%;
