@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Desktop = ({ title, width }) => {
   const markerRef = useRef(null);
@@ -20,27 +20,27 @@ const Desktop = ({ title, width }) => {
       </Link>
       <NavLinks id="navLinks">
         <Marker ref={markerRef} />
-        <Link
+        <NavLink
           onMouseEnter={(e) => moveMarker(e)}
           className="navLink"
           to="/about"
         >
           About
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           onMouseEnter={(e) => moveMarker(e)}
           className="navLink"
           to="/companies"
         >
           Companies
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           onMouseEnter={(e) => moveMarker(e)}
           className="navLink"
           to="/support"
         >
           Support
-        </Link>
+        </NavLink>
       </NavLinks>
       <Button onMouseEnter={(e) => moveMarker(e)}>Sign Up</Button>
     </StyledDesktop>
@@ -89,6 +89,7 @@ const StyledDesktop = styled.div`
   align-items: center;
   padding: 1.5rem;
   position: relative;
+  border-bottom: 2px solid #29323d;
 
   .title {
     text-decoration: none;
