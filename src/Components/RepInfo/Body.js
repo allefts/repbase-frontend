@@ -39,7 +39,8 @@ const RepInfoWrapper = styled.div`
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  margin-top: 3rem;
+  margin-top 3rem;
+  // border-bottom: 1px solid black;
 
   @media (max-width: 1100px) {
     justify-content: center;
@@ -76,6 +77,7 @@ const RepDemo = styled.div`
 
   .demoVideo {
     max-width: 100%;
+    // margin-top: 0.5rem;
   }
 `;
 
@@ -87,7 +89,6 @@ const StyledRep = styled.div`
   .headshot {
     width: 100%;
     height: 100%;
-    // border-radius: 50%;
     object-fit: cover;
   }
 `;
@@ -106,7 +107,7 @@ const ContactBtn = styled.button`
 `;
 
 const Favorite = styled.div`
-  margin: 1rem 0;
+  margin-top: 1rem;
   display: flex;
   align-items: center;
 

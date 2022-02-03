@@ -8,7 +8,6 @@ const Desktop = ({ title, width }) => {
   const moveMarkeronResize = () => {};
 
   const moveMarker = ({ target }) => {
-    console.log(target.offsetLeft);
     markerRef.current.style.left = target.offsetLeft + "px";
     markerRef.current.style.width = target.offsetWidth + "px";
   };
