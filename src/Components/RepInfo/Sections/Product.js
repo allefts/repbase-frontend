@@ -1,10 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
-const Product = () => {
-  return <StyledProduct>Products</StyledProduct>;
+const Products = () => {
+  return <StyledProducts>Products</StyledProducts>;
 };
 
-const StyledProduct = styled.div``;
+const StyledProducts = styled.div``;
 
-export default Product;
+const Product = styled.div``;
+
+const ProductDescription = styled.div``;
+
+export default Products;

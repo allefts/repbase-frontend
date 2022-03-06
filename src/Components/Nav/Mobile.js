@@ -12,7 +12,9 @@ const Mobile = ({ title }) => {
   return (
     <StyledMobileNavWrapper>
       <StyledMobileNav>
-        <Link to="/">{title}</Link>
+        <Link to="/" className="title">
+          {title}
+        </Link>
         <Burger
           onClick={() => {
             setOpenBurger(!openBurger);
@@ -91,6 +93,12 @@ const StyledMobileNavWrapper = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem;
+
+  .title {
+    cursor: pointer;
+    color: ${(props) => props.theme.colors.gunmetal};
+    text-decoration: none;
+  }
 `;
 
 const Burger = styled.div`

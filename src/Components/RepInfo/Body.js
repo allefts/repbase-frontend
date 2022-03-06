@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 import { MdVerified } from "react-icons/md";
@@ -6,7 +6,7 @@ import { MdVerified } from "react-icons/md";
 import Headshot from "../../assets/Headshot1.jpg";
 import videoPlaceholder from "../../assets/video.jpg";
 
-const Body = () => {
+const Body = ({ togglePopup }) => {
   return (
     <RepInfoWrapper>
       <RepInfo>
@@ -21,7 +21,7 @@ const Body = () => {
         <p className="email">john.doe@proofpoint.com</p>
         <p className="phone">(406) 242-3597</p>
         <p className="location">Austin, TX</p>
-        <ContactBtn>Contact Me</ContactBtn>
+        <ContactBtn onClick={togglePopup}>Contact Me</ContactBtn>
         <Favorite>
           <AiOutlineStar className="star" /> Add to Short List
         </Favorite>

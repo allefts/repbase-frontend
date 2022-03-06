@@ -28,7 +28,7 @@ export default Card;
 
 const StyledCard = styled.div`
   min-width: 300px;
-  border: 2px solid rgb(41, 50, 61);
+  border: 2px solid ${(props) => props.theme.colors.frost};
   display: flex;
   flex-flow: column;
   border-radius: 0.5rem;
@@ -42,7 +42,7 @@ const StyledCard = styled.div`
 
   .learnBtn {
     text-align: center;
-    text-decoration: none;
+    text-decoration: inherit;
     width: 200px;
     place-self: center;
     outline: none;
@@ -51,10 +51,11 @@ const StyledCard = styled.div`
     padding: 5px 10px;
     border-radius: 2px;
     transition: all 300ms ease-in-out;
+    color: ${(props) => props.theme.colors.gunmetal};
 
     &:hover {
       background: rgb(41, 50, 61);
-      color: rgb(58, 183, 255);
+      color: ${(props) => props.theme.colors.frost};
     }
   }
 `;

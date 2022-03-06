@@ -1,21 +1,18 @@
-import styled from "styled-components";
-import { RuntimeGlobals } from "webpack";
+import React from "react";
+import { ThemeProvider } from "styled-components";
 
 const theme = {
-  main: {
-    name: "Default",
-    colors: {
-      main: "#29323d",
-      accent1: "#9aadbf",
-      accent2: "#6d98BA",
-    },
-    button: {
-      fontFamily: "Raleway, sans-serif",
-      border: `2px solid ${theme.colors.main}`,
-    },
-    fonts: {
-      primary: "Raleway, sans-serif",
-      secondary: "Merriweather, sans-serif",
-    },
+  colors: {
+    gunmetal: "#29323d",
+    grey: "#9AADBF",
+    frost: "#6D98BA",
   },
+  fonts: ["Raleway", "sans-serif", "Merriweather"],
+  fontSize: {},
 };
+
+const Theme = ({ children }) => (
+  <ThemeProvider theme={theme}>{children}</ThemeProvider>
+);
+
+export default Theme;

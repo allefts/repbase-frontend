@@ -4,13 +4,13 @@ import styled from "styled-components";
 import SectionBtn from "./SectionBtn";
 import Resources from "./Sections/Resources";
 import Events from "./Sections/Events";
-import Product from "./Sections/Product";
+import Products from "./Sections/Product";
 import Section from "./Section";
 
 const Sections = [
   { title: "Resource Library", component: <Resources /> },
   { title: "Webinar's & Events", component: <Events /> },
-  { title: "Product Description & Use Case", component: <Product /> },
+  { title: "Product Description & Use Case", component: <Products /> },
 ];
 
 const ToggleSection = () => {

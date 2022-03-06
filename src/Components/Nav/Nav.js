@@ -24,6 +24,6 @@ const StyledNav = styled.nav`
 const StyledTitle = styled.h1`
   font-size: 2rem;
   font-weight: 600;
-  color: #29323d;
+  color: ${(props) => props.theme.colors.frost}
   cursor: pointer;
 `;

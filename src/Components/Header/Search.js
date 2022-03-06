@@ -22,7 +22,7 @@ const StyledSearch = styled.div`
   .searchIcon {
     font-size: clamp(2.5rem, 2.5vw, 3rem);
     padding: 0.5rem;
-    background: #3ab7ff;
+    background: ${(props) => props.theme.colors.frost};
     border-radius: 50%;
     cursor: pointer;
     transition: all 300ms ease-in-out;
@@ -51,7 +51,7 @@ const SearchInput = styled.input`
   font-size: clamp(0.75rem, 2.5vw, 1.25rem);
   border-radius: 10rem;
   max-width: 600px;
-  border: 2px solid rgba(41, 50, 61, 0.5);
+  border: 2px solid ${(props) => props.theme.colors.frost};
   outline: none;
   transition: all 300ms ease-in-out;
   color: rgb(41, 50, 61);

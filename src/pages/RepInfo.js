@@ -1,15 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import StyledSection from "../Components/RepCard/CardSection";
+// import StyledSection from "../Components/RepCard/CardSection";
 import Body from "../Components/RepInfo/Body";
+import ContactPopup from "../Components/Popup/ContactPopup";
 import Header from "../Components/RepInfo/Header";
 import ToggleSection from "../Components/RepInfo/ToggleSection";
 
 const RepInfoPage = () => {
+  const [popupStatus, setPopupStatus] = useState(false);
+
+  const togglePopup = () => setPopupStatus(!popupStatus);
+
   return (
     <StyledRepInfoPage>
       <Header />
-      <Body />
+      <Body togglePopup={togglePopup} />
+      <ContactPopup trigger={popupStatus} togglePopup={togglePopup} />
       <ToggleSection />
     </StyledRepInfoPage>
   );
