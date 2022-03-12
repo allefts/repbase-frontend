@@ -51,8 +51,8 @@ const RepInfoWrapper = styled.div`
 const RepInfo = styled.div`
   display: flex;
   flex-flow: column;
-  justify-content: center;
-  align-items: center;
+  // justify-content: center;
+  // align-items: center;
   flex: 0 1 500px;
   font-size: 1rem;
   line-height: 1.6;
@@ -79,6 +79,10 @@ const RepDemo = styled.div`
     max-width: 100%;
     // margin-top: 0.5rem;
   }
+
+  .demoTitle {
+    margin-bottom: 1rem;
+  }
 `;
 
 const StyledRep = styled.div`
@@ -99,6 +103,7 @@ const ContactBtn = styled.button`
   background: rgb(41, 50, 61);
   color: white;
   border: none;
+  width: 200px;
   outline: none;
   cursor: pointer;
   font-size: 1rem;

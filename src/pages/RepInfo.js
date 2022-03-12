@@ -5,6 +5,7 @@ import Body from "../Components/RepInfo/Body";
 import ContactPopup from "../Components/Popup/ContactPopup";
 import Header from "../Components/RepInfo/Header";
 import ToggleSection from "../Components/RepInfo/ToggleSection";
+import Analytics from "../Components/RepInfo/Analytics/Analytics";
 
 const RepInfoPage = () => {
   const [popupStatus, setPopupStatus] = useState(false);
@@ -16,6 +17,7 @@ const RepInfoPage = () => {
       <Header />
       <Body togglePopup={togglePopup} />
       <ContactPopup trigger={popupStatus} togglePopup={togglePopup} />
+      <Analytics />
       <ToggleSection />
     </StyledRepInfoPage>
   );

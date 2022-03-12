@@ -21,7 +21,7 @@ const ContactPopup = ({ trigger, togglePopup }) => {
     <StyledContactPopup>
       <Inside>
         <IoMdClose className="closeBtn" onClick={togglePopup} />
-        <Title>To: John Doe | Sales Manager @ H-E-B</Title>
+        <Title>To: John Doe | Sales Director @ H-E-B</Title>
         <ContactForm
           onSubmit={handleSubmit((data) => {
             console.log(data);

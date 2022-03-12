@@ -66,7 +66,7 @@ const Marker = styled.div`
 `;
 
 const NavLinks = styled.div`
-  margin: 0 6rem 0 0;
+  // margin: 0 6rem 0 0;
 
   .signUpBtn {
     padding: 6px;

@@ -36,7 +36,7 @@ const ToggleSection = () => {
 };
 
 const StyledToggleSection = styled.div`
-  margin-top: 12rem;
+  // margin-top: 12rem;
 `;
 
 const AvailableSections = styled.div`
