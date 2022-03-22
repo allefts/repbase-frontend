@@ -10,20 +10,29 @@ import HomePage from "./pages/Home";
 import AboutPage from "./pages/About";
 import SupportPage from "./pages/Support";
 import RepInfoPage from "./pages/RepInfo";
+import SignUpPage from "./pages/SignUp";
+import Footer from "./Components/Footer/Footer";
 
 const App = (props) => (
-  <StyledApp>
-    <Nav />
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/about" element={<AboutPage />} />
-      <Route path="/companies" element={<RepsPage />} />
-      <Route path="/support" element={<SupportPage />} />
-      <Route path="/repinfo" element={<RepInfoPage />} />
-    </Routes>
-  </StyledApp>
+  <div>
+    <StyledApp>
+      <Nav />
+      <Routes className="mainContent">
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/companies" element={<RepsPage />} />
+        <Route path="/support" element={<SupportPage />} />
+        <Route path="/repinfo" element={<RepInfoPage />} />
+        <Route path="/signup" element={<SignUpPage />} />
+      </Routes>
+    </StyledApp>
+    <Footer />
+  </div>
 );
 
-const StyledApp = styled.div``;
+const StyledApp = styled.div`
+  min-height: 100vh;
+  position: relative;
+`;
 
 export default App;

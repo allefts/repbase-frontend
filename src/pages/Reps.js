@@ -12,6 +12,8 @@ const RepsPage = () => {
         <Card />
         <Card />
         <Card />
+        <Card />
+        <Card />
       </CardSection>
     </StyledRepsPage>
   );
